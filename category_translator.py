@@ -12,9 +12,9 @@ from tqdm import tqdm
 
 @dataclass
 class FileHandler:
-    traslations_df: str = 'category_translations.csv'
-    scrape_results_df: str = 'scrape_results.csv'
-    dictionary_df: str = 'OPTED-Dictionary.csv'
+    traslations_df: str = r"C:\Users\singh\Desktop\AI\hospitality_content_generation\snapscrape\Snapscrape2\category_translations.csv"
+    scrape_results_df: str = r"C:\Users\singh\Desktop\AI\hospitality_content_generation\snapscrape\Snapscrape2\scrape_results.csv"
+    dictionary_df: str = r"C:\Users\singh\Desktop\AI\hospitality_content_generation\snapscrape\Snapscrape2\OPTED-Dictionary.csv"
 
 @dataclass
 class TransDict:

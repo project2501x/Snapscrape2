@@ -32,14 +32,14 @@ class UserInfo:
 
 @dataclass
 class FileHandler:
-    maindf_name: str = 'scrape_results.csv'
-    users_dfs_folder: str = r"/media/jhawk/External ssd/Python folders/Snapscrape/users_to_scrape"
-    scraped_users_folder: str = r'/media/jhawk/External ssd/Python folders/Snapscrape/scraped_df'
+    maindf_name: str = r"C:\Users\singh\Desktop\AI\hospitality_content_generation\snapscrape\Snapscrape2\scrape_results.csv"
+    users_dfs_folder: str = r"C:\Users\singh\Desktop\AI\hospitality_content_generation\snapscrape\Snapscrape2\users_to_scrape"
+    scraped_users_folder: str = r"C:\Users\singh\Desktop\AI\hospitality_content_generation\snapscrape\Snapscrape2\scraped_df"
 
 @dataclass
 class SesHandler:
     url : str = f"https://gramsnap.com/api/ig/userInfoByUsername/"
-    qued_wait: int = 5
+    qued_wait: int = 10
     sesstimeout: int = 60
 
 
@@ -159,6 +159,7 @@ async def load_existing_users() -> set:
     existing_users = set()
     if os.path.exists(file_handler.maindf_name):
         users_data = pd.read_csv(file_handler.maindf_name)
+        print(users_data)
         for user in tqdm(users_data['username'],'Loading existing users'):
             existing_users.add(user)
 

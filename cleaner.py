@@ -52,10 +52,10 @@ async def file_opener(file:str,column:str,tr_column:str) -> set:
     return categories
 
 async def main():
-    replacement_dict = await file_opener('category_translations.csv','category','translation') 
+    replacement_dict = await file_opener(r"C:\Users\singh\Desktop\AI\hospitality_content_generation\snapscrape\Snapscrape2\category_translations.csv",'category','translation') 
     
-    input_file = 'scrape_results.csv'
-    output_file = 'translated_scrape_results.csv'
+    input_file = r"C:\Users\singh\Desktop\AI\hospitality_content_generation\snapscrape\Snapscrape2\scrape_results.csv"
+    output_file = r"C:\Users\singh\Desktop\AI\hospitality_content_generation\snapscrape\Snapscrape2\category_translations.csv"
     
     await modify_and_save_csv(input_file, output_file, 'category', replacement_dict)
 
